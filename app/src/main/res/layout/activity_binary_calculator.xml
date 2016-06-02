@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        popupTheme="@style/ThemeOverlay.AppCompat.Light">
+    </android.support.v7.widget.Toolbar>
+
+    <Button
+        android:id="@+id/equals_key"
+        android:textColor="#FFFFFF"
+        android:textSize="70sp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/buttonshape"
+        android:layout_alignParentBottom="true"
+        android:text="@string/equals_key" >
+    </Button>
+
+    <Button
+        android:id="@+id/zero_key"
+        android:textColor="#FFFFFF"
+        android:textSize="100sp"
+        android:layout_width="180dp"
+        android:layout_height="200dp"
+        android:background="@drawable/buttonshape"
+        android:layout_above="@id/equals_key"
+        android:text="@string/zero_key" >
+    </Button>
+
+    <Button
+        android:id="@+id/one_key"
+        android:textColor="#FFFFFF"
+        android:textSize="100sp"
+        android:layout_width="180dp"
+        android:layout_height="200dp"
+        android:background="@drawable/buttonshape"
+        android:layout_above="@id/equals_key"
+        android:layout_toRightOf="@id/zero_key"
+        android:text="@string/one_key" >
+    </Button>
+
+    <TextView
+        android:id="@+id/textDecimal"
+        android:textSize="30sp"
+        android:textColor="#ffd8d8d8"
+        android:layout_width="270dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/textBinary"
+        android:gravity="right|center"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/textCurrentOperator"
+        android:textSize="30sp"
+        android:textColor="#000000"
+        android:layout_toRightOf="@id/textDecimal"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/textBinary"
+        android:gravity="center"
+        android:text=""
+        android:background="#C0C0C0"/>
+
+
+    <Button
+        android:id="@+id/plus_key"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:background="@drawable/buttonshape"
+        android:layout_above="@id/zero_key"
+        android:text="@string/plus_key"
+        android:onClick="onOperatorClick">
+    </Button>
+
+    <Button
+        android:id="@+id/minus_key"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:background="@drawable/buttonshape"
+        android:layout_above="@id/zero_key"
+        android:layout_toRightOf="@id/plus_key"
+        android:text="@string/minus_key"
+        android:onClick="onOperatorClick">
+    </Button>
+
+    <Button
+        android:id="@+id/times_key"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:background="@drawable/buttonshape"
+        android:layout_above="@id/one_key"
+        android:layout_toRightOf="@id/minus_key"
+        android:text="@string/times_key"
+        android:onClick="onOperatorClick">
+    </Button>
+
+    <Button
+        android:id="@+id/clear_key"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:background="@drawable/buttonshape"
+        android:layout_above="@id/one_key"
+        android:layout_toRightOf="@id/times_key"
+        android:text="@string/clear_key" >
+    </Button>
+
+    <TextView
+        android:id="@+id/textBinary"
+        android:clickable="true"
+        android:textSize="40sp"
+        android:color="#444444"
+        android:textColor="#000000"
+        android:gravity="right"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_above="@id/plus_key"
+        android:text="0"
+        android:maxLines="1"
+        android:maxLength="17"
+        android:background="#C0C0C0">
+    </TextView>
+
+</RelativeLayout>
